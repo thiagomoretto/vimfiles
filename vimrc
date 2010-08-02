@@ -19,6 +19,7 @@ set history=1000
 
 set showcmd	" show incomplement commands
 set showmode	" show current mode
+set pastetoggle=<F3>
 
 " searching
 set incsearch	" incremental search
@@ -154,3 +155,44 @@ set wmh=0
 map bn :bn<cr>
 map bp :bp<cr>
 nnoremap <F5> :buffers<CR>:buffer<Space>
+
+"
+" Other shortcuts
+"
+" nmap <C-s> :w<CR>
+" vmap <C-s> <Esc><C-s>gv
+" imap <C-s> <Esc><C-s>
+
+" Wont working in iTerm
+map <c-s> :w<cr>
+imap <c-s> <c-o><c-s>
+imap <c-s> <esc><c-s>
+
+" Buffer naviation
+map <M-Left> :bprevious<CR>
+map <M-Right> :bnext<CR>
+
+" Select all.
+" map <c-a> ggVG
+
+" Undo in insert mode.
+imap <c-z> <c-o>u
+
+" Tab easy in v-mode
+vmap <tab> >gv
+vmap <S-tab> <gv
+
+" Delete line
+imap <C-d> <Esc>ddi
+
+" Indent
+imap <C-=> <Esc><C-=>i
+
+" Info
+map ,datetime  :let @z=strftime("%d %b %Y %X")<Cr>"zpa
+map ,date      :let @z=strftime("%d %b %Y")<Cr>"zpa
+map ,me        :let @z="Thiago Moretto"<Cr>"zpa
+
+" Vim 7 auto-complete (omni)
+" enabling rails
+let g:rubycomplete_rails = 1
