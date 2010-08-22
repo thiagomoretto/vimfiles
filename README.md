@@ -10,3 +10,7 @@ On MacOS X I install using 'port' like here:
 
     $ sudo port install vim +ruby
 
+
+Ack on MacOS X:
+
+    $ sudo port install p5-app-ack

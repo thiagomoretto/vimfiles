@@ -1,6 +1,9 @@
 " BetterVim
 " @thiagomoretto
 
+" pathogen
+call pathogen#runtime_append_all_bundles()
+
 " using Vim settings
 set nocompatible
 
@@ -70,6 +73,8 @@ set ruler
 " making white space visible (use ,s)
 " set listchars=tab:>-,trail:,eol:$
 nmap <silent> <leader>s :set nolist!<CR>
+
+
 
 set shortmess=atI
 set visualbell
@@ -196,3 +201,9 @@ map ,me        :let @z="Thiago Moretto"<Cr>"zpa
 " Vim 7 auto-complete (omni)
 " enabling rails
 let g:rubycomplete_rails = 1
+
+" Command-T cfg
+let g:CommandTMaxHeight=10
+let g:CommandTMatchWindowAtTop=1
+
+nnoremap <leader>t :CommandT<cr>
