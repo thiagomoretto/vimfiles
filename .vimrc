@@ -1,5 +1,5 @@
 " Modeline and Notes {
-" vim: set foldmarker={,} foldlevel=0 foldmethod=marker spell:
+" vim: set foldmarker={,} foldlevel=0 foldmethod=marker spell!:
 " }
 
 " Environment {
@@ -28,7 +28,7 @@
 
 " }
 
-" BufWinEnterndles {
+" Bundles {
     " Deps
         Bundle 'gmarik/vundle'
         Bundle 'MarcWeber/vim-addon-mw-utils'
@@ -139,9 +139,8 @@
     set viewoptions=folds,options,cursor,unix,slash " better unix / windows compatibility
     set virtualedit=onemore         " allow for cursor beyond last character
     set history=1000                " Store a ton of history (default is 20)
-    set spell                       " spell checking on
+    set nospell                     " spell checking off
     set hidden                      " allow buffer switching without saving
-    cmap w!! %!sudo tee > /dev/null %
 
     " Setting up the directories {
         set backup                      " backups are nice ...
@@ -249,8 +248,6 @@
 
     "
     map - :nohls<CR>
-    map <C-j> :bprev<CR>
-    map <C-k> :bnext<CR>
 
     " Stupid shift key fixes
     cmap W w
@@ -591,4 +588,8 @@ endfunction
             source ~/.gvimrc.local
         endif
     endif
+" }
+
+" Overrides {
+    color molokai
 " }
